@@ -18,9 +18,8 @@ jobs:
         actions: write
 
     Build-Packages:
-      uses: ./.github/workflows/Build-Packages.yml
+      uses: ./.github/workflows/Build-OpenWrt.yml
       permissions:
         contents: write
         actions: read
-      with:
-        sdk_version: ALL
+
