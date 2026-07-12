@@ -18,7 +18,7 @@ jobs:
       actions: write
     with:
       repo_url: https://github.com/openwrt/openwrt.git
-      repo_branch: master
+      repo_branch: main
       config_file: configs/JDCloud.config
       firmware_tag: JDCloud
       kernel_file: kernel-6.12
