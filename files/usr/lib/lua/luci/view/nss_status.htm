@@ -5,7 +5,7 @@
 local io = require "io"
 local string = string
 
--- NSS 固件版本（从 dmesg 提取）
+-- NSS 固件版本
 local version = "Unknown"
 local f = io.popen("dmesg | grep 'NSS fw version:' | tail -1 | sed 's/.*NSS fw version: //'")
 if f then
