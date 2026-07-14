@@ -1,0 +1,5 @@
+#!/bin/sh
+# 开机后延迟清除 LuCI 缓存，确保自定义菜单出现
+sleep 10
+rm -rf /tmp/luci-* /tmp/ucode-*
+/etc/init.d/uhttpd restart
