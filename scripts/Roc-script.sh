@@ -105,3 +105,7 @@ echo "baidu.com"  > package/luci-app-passwall/luci-app-passwall/root/usr/share/p
 
 ./scripts/feeds update -i -a
 ./scripts/feeds install -a
+
+if [ -f "$GITHUB_WORKSPACE/diy-part.sh" ]; then
+    bash "$GITHUB_WORKSPACE/scripts/diy-part.sh"
+fi
