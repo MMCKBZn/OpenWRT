@@ -1,0 +1,10 @@
+{
+    "admin/status/nss": {
+        "title": "NSS Status",
+        "order": 99,
+        "action": {
+            "type": "template",
+            "path": "nss_status"
+        }
+    }
+}
