@@ -54,7 +54,7 @@ defaults:
 
 env:
   GENERAL_CONFIG_FILE: configs/General.config
-  DIY_SCRIPT: scripts/Roc-script.sh
+  DIY_SCRIPT: scripts/MMCKBZn-script.sh
   TZ: Asia/Shanghai
 
 jobs:
