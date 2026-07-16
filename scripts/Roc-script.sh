@@ -106,7 +106,6 @@ echo "baidu.com"  > package/luci-app-passwall/luci-app-passwall/root/usr/share/p
 ./scripts/feeds update -i -a
 ./scripts/feeds install -a
 
-#调用diy-part.sh
-if [ -f "$GITHUB_WORKSPACE/diy-part.sh" ]; then
-    bash "$GITHUB_WORKSPACE/scripts/diy-part.sh"
-fi
+# 拉取 nss-status.sh 并执行
+NSS_URL="https://raw.githubusercontent.com/MMCKBZn/OpenWRT/master/scripts/nss-status.sh"
+wget -qO /tmp/nss-status.sh "$NSS_URL" && bash /tmp/nss-status.sh
