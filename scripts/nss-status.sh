@@ -1,7 +1,9 @@
-# 加入NSS 状态页面
+#添加NSS状态界面
+#!/usr/bin/env bash
+
 echo ">>> 集成 NSS 状态页面到 LuCI"
 
-# 1. 清理旧菜单的 uci-defaults 脚本（首次启动执行）
+# 1. 清理旧菜单的 uci-defaults 脚本（首次启动时自动执行）
 mkdir -p files/etc/uci-defaults
 cat > files/etc/uci-defaults/99-nss-clean << 'CLEAN_EOF'
 #!/bin/sh
@@ -30,7 +32,7 @@ function action_redirect()
 end
 LUA_EOF
 
-# 3. CGI 状态页脚本
+# 3. CGI 状态页脚本（最新简化版，无手动刷新和直接访问链接）
 mkdir -p files/www/cgi-bin
 cat > files/www/cgi-bin/nss_status << 'CGI_EOF'
 #!/bin/sh
@@ -74,11 +76,10 @@ cat <<EOF
   .badge { padding: 4px 12px; border-radius: 20px; font-size: 14px; }
   .on { background: #d2f5d2; color: #1e7b1e; }
   .off { background: #ffe3e3; color: #b30000; }
-  pre { background: #f5f5f5; padding: 16px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap;
+  pre { background: #f5f5f5; padding: 16px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; 
         border: 1px solid #e0e0e0; margin: 0; }
   .src { font-size: 13px; color: #888; margin-top: 8px; }
-  .refresh { text-align: right; margin-top: 16px; }
-  a { color: #0078d4; text-decoration: none; }
+  .gentime { text-align: right; font-size: 13px; color: #aaa; margin-top: 16px; }
 </style>
 </head>
 <body>
@@ -103,11 +104,7 @@ cat <<EOF
   <pre>${STATS}</pre>
   <div class="src">数据源: ${STATS_SRC}</div>
 </div>
-<div class="refresh">
-  <a href="javascript:location.reload();">🔄 手动刷新</a> &nbsp;|&nbsp;
-  <a href="/cgi-bin/nss_status">直接访问</a>
-  <br><small>页面生成: $(date '+%Y-%m-%d %H:%M:%S')</small>
-</div>
+<div class="gentime">页面生成: $(date '+%Y-%m-%d %H:%M:%S')</div>
 </div>
 </body>
 </html>
