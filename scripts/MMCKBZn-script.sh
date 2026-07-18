@@ -109,3 +109,7 @@ echo "baidu.com"  > package/luci-app-passwall/luci-app-passwall/root/usr/share/p
 # 拉取 nss-status.sh 并执行
 NSS_URL="https://raw.githubusercontent.com/MMCKBZn/OpenWRT/master/scripts/nss-status.sh"
 wget -qO /tmp/nss-status.sh "$NSS_URL" && bash /tmp/nss-status.sh
+
+# 拉取 led-button.sh 并执行
+LED_URL="https://raw.githubusercontent.com/MMCKBZn/OpenWRT/master/scripts/led-button.sh"
+wget -qO /tmp/led-button.sh "$LED_URL" && bash /tmp/led-button.sh
