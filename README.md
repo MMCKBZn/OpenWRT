@@ -1,7 +1,7 @@
 <div align="center">
 <h1>OpenWrt — 云编译</h1>
   
-[![Build OpenWrt](https://github.com/MMCKBZn/OpenWRT/actions/workflows/Trigger-All-Workflows.yml/badge.svg)]
+[![Build OpenWrt](https://github.com/MMCKBZn/OpenWRT/actions/workflows/JDCloud-ImmortalWrt.yml/badge.svg)]
 (https://github.com/MMCKBZn/OpenWRT/actions/workflows/Trigger-All-Workflows.yml)
 [![GitHub Release](https://img.shields.io/github/v/release/MMCKBZn/OpenWRT)](https://github.com/MMCKBZn/OpenWRT/releases)
 [![GitHub Stars](https://img.shields.io/github/stars/MMCKBZn/OpenWRT)](https://github.com/MMCKBZn/OpenWRT/stargazers)
