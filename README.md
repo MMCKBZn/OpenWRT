@@ -2,7 +2,6 @@
 <h1>OpenWrt — 云编译</h1>
   
 [![Build OpenWrt](https://github.com/MMCKBZn/OpenWRT/actions/workflows/JDCloud-ImmortalWrt.yml/badge.svg)]
-(https://github.com/MMCKBZn/OpenWRT/actions/workflows/JDCloud-ImmortalWrt.yml)
 [![GitHub Release](https://img.shields.io/github/v/release/MMCKBZn/OpenWRT)](https://github.com/MMCKBZn/OpenWRT/releases)
 [![GitHub Stars](https://img.shields.io/github/stars/MMCKBZn/OpenWRT)](https://github.com/MMCKBZn/OpenWRT/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/MMCKBZn/OpenWRT)](https://github.com/MMCKBZn/OpenWRT/network/members)
