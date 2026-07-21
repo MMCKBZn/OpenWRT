@@ -1,6 +1,8 @@
 <div align="center">
 <h1>OpenWrt — 云编译</h1>
 
+[![GitHub Release](https://img.shields.io/github/v/release/MMCKBZn/OpenWRT)](https://github.com/MMCKBZn/OpenWRT/releases)
+
 ## 特别提示
 
 - **本人不对任何人因使用本固件所遭受的任何理论或实际的损失承担责任！**
